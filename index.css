@@ -1,0 +1,123 @@
+body {
+    background: #1B1924;
+    font-family: Josefin Sans;
+    user-select: none;
+}
+
+.container {
+    width: 320px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo-img {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+#main-heading {
+    color: #FFF;
+    font-family: Josefin Sans;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+.inputs {
+    color: #8F8F8F;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 8px;
+    background-color: #444059;
+    border: none;
+    margin: 5px 3px;
+    padding: 5px 3px;
+
+}
+
+input {
+    text-align: center;
+    border: none;
+}
+
+#endorsement-in {
+    width: 317px;
+    height: 100px;
+    resize: none;
+}
+
+#sender-receiver {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    text-align: center;
+}
+
+.fromto {
+    width: 152.852px;
+    height: 38px;
+}
+
+#publish-btn {
+    border-radius: 8px;
+    background: #28A9F1;
+    width: 324px;
+    height: 48px;
+    border: none;
+    color: #04131C;
+    text-align: center;
+    font-family: Josefin Sans;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.endorse-headings {
+    color: #FFF;
+    font-family: Josefin Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    margin-top: -10px;
+}
+
+li {
+    background-color: #FFF;
+    color: #1B1924;
+    padding: 3px 20px;
+    font-family: Inter;
+    margin-bottom: 10px;
+    width: 282px;
+}
+
+#topara,
+#frompara {
+    font-weight: bold;
+}
+
+#bottom{
+    display: flex;
+    justify-content: space-between;
+}
+#likeBtn{
+    border: none;
+    background: none;
+}
