@@ -37,7 +37,7 @@ function createListItems(endorseObj, objectID) {
 
         let newBottomDiv = document.createElement('div');
         newBottomDiv.id = 'bottom';
-        
+
         let newFromParaEl = document.createElement('p');
         newFromParaEl.id = 'frompara';
         newFromParaEl.textContent = `From ${endorseObj.from}`;
@@ -54,7 +54,7 @@ function createListItems(endorseObj, objectID) {
         let newLikesBtnEl = document.createElement('button');
         newLikesBtnEl.innerHTML = `<i class="fa-solid fa-heart"></i>`;
         newLikesBtnEl.id = 'likeBtn';
-        newLikesBtnEl.addEventListener('click', function(){
+        newLikesBtnEl.addEventListener('click', function () {
 
             console.log("clicked once");
             this.disabled = true;
@@ -93,7 +93,7 @@ function displayEndorsements(listItems) {
 
         createListItems(endorseObj, listItems[i][0]);
     }
-    
+
 }
 
 onValue(endorsementsdb, function (snapshot) {
@@ -112,13 +112,17 @@ function clearInputEl() {
 publishBtn.addEventListener('click', function () {
 
     isDisabled = false;
+    let endorsement = {};
     console.log(endorseInputEl.value);
-    let endorsement = {
-        endorsement: endorseInputEl.value,
-        from: fromEl.value,
-        to: toEl.value,
-        likesCount: 0
-    };
+
+    if (endorseInputEl.value && fromEl.value && toEl.value) {
+        endorsement = {
+            endorsement: endorseInputEl.value,
+            from: fromEl.value,
+            to: toEl.value,
+            likesCount: 0
+        };
+    }
 
     if (endorsement)
         push(endorsementsdb, endorsement); // this will insert items in DB
